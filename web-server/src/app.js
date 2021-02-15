@@ -1,10 +1,12 @@
+const path = require('path')
 const express = require('express')
 
-const app = express()
+console.log(__dirname)
 
-app.get('', (req, res) => {         // root
-    res.send('<h1>Weather App: Under construction</h1>')
-})
+const app = express()
+const publicDirectoryPatch = path.join(__dirname, '../public')
+
+app.use(express.static(publicDirectoryPatch))
 
 app.get('/help', (req, res) => {    // ../help
     res.send({
