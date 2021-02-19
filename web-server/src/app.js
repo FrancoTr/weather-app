@@ -10,7 +10,10 @@ app.set('view engine', 'hbs')
 app.use(express.static(publicDirectoryPatch))
 
 app.get('', (req, res) => {
-    res.render('index') //views folder ought to be inside the project's root
+    res.render('index', {
+        title: 'Weather App',
+        name: 'Franco Traverso'
+    }) //views folder ought to be inside the project's root
 })
 
 app.get('/weather', (req, res) => { // ../weather
