@@ -6,6 +6,7 @@ console.log(__dirname)
 const app = express()
 const publicDirectoryPatch = path.join(__dirname, '../public')
 
+app.set('view engine', 'hbs')
 app.use(express.static(publicDirectoryPatch))
 
 app.get('/weather', (req, res) => { // ../weather
