@@ -23,6 +23,13 @@ app.get('/about', (req, res) => {
     })
 })
 
+app.get('/help', (req, res) => {
+    res.render('help', {
+        title: 'Help',
+        message: 'This message will be redacted in the near future, I swear!'
+    })
+})
+
 app.get('/weather', (req, res) => { // ../weather
     res.send({
         location: 'location TBD',
