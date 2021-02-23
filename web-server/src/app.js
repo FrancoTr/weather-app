@@ -16,6 +16,13 @@ app.get('', (req, res) => {
     }) //views folder ought to be inside the project's root
 })
 
+app.get('/about', (req, res) => {
+    res.render('about', {
+        title: 'About Me',
+        name: 'Franco Traverso'
+    })
+})
+
 app.get('/weather', (req, res) => { // ../weather
     res.send({
         location: 'location TBD',
