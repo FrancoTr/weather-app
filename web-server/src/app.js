@@ -1,14 +1,18 @@
 const path = require('path')
 const express = require('express')
 
-console.log(__dirname)
-
 const app = express()
+
+// Define paths for Express config
 const publicDirectoryPatch = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates')
 
+
+// Setup handlebars engine and views location
 app.set('view engine', 'hbs')
-app.set('views', viewsPath) //Pointing express into this cumtom path where dynamic templates are gathered
+app.set('views', viewsPath) //Pointing Express into this cumtom path where dynamic templates are gathered
+
+// Setup static directory to serve
 app.use(express.static(publicDirectoryPatch))
 
 app.get('', (req, res) => {
