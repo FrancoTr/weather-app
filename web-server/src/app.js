@@ -7,11 +7,13 @@ const app = express()
 // Define paths for Express config
 const publicDirectoryPatch = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
+const partialPath = path.join(__dirname, '../templates/partials')
 
 
 // Setup handlebars engine and views location
 app.set('view engine', 'hbs')
 app.set('views', viewsPath) //Pointing Express into this cumtom path where dynamic templates are gathered
+hbs.registerPartials(partialPath)
 
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPatch))
