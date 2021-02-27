@@ -12,7 +12,7 @@ const partialPath = path.join(__dirname, '../templates/partials')
 
 // Setup handlebars engine and views location
 app.set('view engine', 'hbs')
-app.set('views', viewsPath) //Pointing Express into this cumtom path where dynamic templates are gathered
+app.set('views', viewsPath) //Pointing Express into this custom path where dynamic templates are gathered
 hbs.registerPartials(partialPath)
 
 // Setup static directory to serve
@@ -46,6 +46,7 @@ app.get('/weather', (req, res) => { // ../weather
         weather: 'weather TBD'
     })
 })
-app.listen(3000, () => {
+
+app.listen(3000, () => {    //Web server set up in a local enviroment
     console.log('Server is up on port 3000.')
 })    
