@@ -12,7 +12,5 @@ img {
 
 p.errormessage {
     color: black;
-    text-align: center;
-    text-size-adjust: 30px;
     background-color: red;
 }

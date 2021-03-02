@@ -48,12 +48,20 @@ app.get('/weather', (req, res) => { // ../weather
 })
 
 app.get('/help/*', (req, res) => {
-    res.send('Help article not found')
+    res.render('404', {
+        title: '404',
+        name: 'Franco Traverso',
+        errorMessage: 'Sorry!, Help article not found'
+    })
 })
 
 //the 404 route handler should be last, because Express tries to match any former posibility
-app.get('*', (req, res) => {    // "*" is a wildcard character, in this context, it means "match anything that hasn't been matched so far"
-    res.send('My 404 page')
+app.get('*', (req, res) => {    // "*" is a wildcard character, in this context, it means "match anything that hasn't been matched so far
+    res.render('404', {
+        title: '404',
+        name: 'Franco Traverso',
+        errorMessage: 'Sorry!, 404 Page not found :('
+    })
 })
 
 app.listen(3000, () => {    //Web server set up in a local enviroment
