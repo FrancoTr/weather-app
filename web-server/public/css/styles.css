@@ -9,3 +9,10 @@ h2 {
 img {
     width: 250px;
 }
+
+p.errormessage {
+    color: black;
+    text-align: center;
+    text-size-adjust: 30px;
+    background-color: red;
+}
