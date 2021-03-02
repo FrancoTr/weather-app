@@ -47,6 +47,11 @@ app.get('/weather', (req, res) => { // ../weather
     })
 })
 
+//the 404 route handler should be last, because Express tries to match any former posibility
+app.get('*', (req, res) => {    // "*" is a wildcard character, in this context, it means "match anything that hasn't been matched so far"
+    res.send('My 404 page')
+})
+
 app.listen(3000, () => {    //Web server set up in a local enviroment
     console.log('Server is up on port 3000.')
 })    
