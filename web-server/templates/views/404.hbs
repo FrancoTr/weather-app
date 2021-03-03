@@ -1,11 +1,18 @@
 <!DOCTIPE html>
 <html>
     <head>
+        <title>404 error</title>
+        <link rel="icon" href="/img/weather.png">
         <link rel="stylesheet" href="/css/styles.css">
     </head>
         <body>
-            {{>header}}
-            <p class="errormessage">{{errorMessage}}</p>
+            <div class="main-content">
+                <header>
+                    {{>header}}
+                </header>
+                <p class="errormessage">{{errorMessage}}</p>
+            </div>
+            
             <footer>
                 {{>footer}}
             </footer>
