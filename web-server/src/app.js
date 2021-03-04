@@ -47,11 +47,10 @@ app.get('/weather', (req, res) => { // ../weather
         })
     }
     console.log(req.query.address)
-    let address = req.query.address
     res.send({
         location: 'location TBD',
         weather: 'weather TBD',
-        address
+        address: req.query.address
     })
 })
 
