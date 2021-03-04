@@ -41,9 +41,17 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/weather', (req, res) => { // ../weather
+    if (!req.query.address) {
+        return res.send({
+            error: 'You must provide an Address'
+        })
+    }
+    console.log(req.query.address)
+    let address = req.query.address
     res.send({
         location: 'location TBD',
-        weather: 'weather TBD'
+        weather: 'weather TBD',
+        address
     })
 })
 
@@ -53,7 +61,6 @@ app.get('/products', (req, res) => {    //Error "Cannot set headers after they a
             error: 'You must provide a search term'
         })
     }
-
     console.log(req.query.search)
     res.send({
         products: []
