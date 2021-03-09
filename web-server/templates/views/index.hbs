@@ -1,24 +1,27 @@
 <!DOCTIPE html>
 <html>
     <head>
-        <title>Weather</title>
+        <title>Weather App</title>
         <link rel="icon" href="/img/weather.png">
         <link rel="stylesheet" href="/css/styles.css">
     </head>
         <body>
             <div class="main-content">
                 <header>
-                {{>header}}
-                    <p>Use this site to get your weather!</p>
-                    <form>
-                        <input placeholder="Location">
-                            <button>Search</button>
-                    </form>
+                    {{>header}}
                 </header>
+                <p>Use this site to get your weather!</p>
+                <form>
+                    <input placeholder="Location">
+                    <button>Search</button>
+                </form>
+                <p id="errorMessage"></p> <!--Error-->
+                <p id="locationsMessage"></p> <!--Location-->
+                <p id="forecastMessage"></p> <!--Weather Forecast-->
             </div>
             <footer>
                 {{>footer}}
             </footer>
-            <script src="/js/app.js"></script>
+            <script src="/js/app.js"></script>  <!--Moved down below to be ran after the form has been renderized-->
         </body>
 </html>
