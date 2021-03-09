@@ -16,7 +16,6 @@ if (!address) {
             if (error) {
                 return console.log(error)
             }
-            
             console.log(location)
             console.log(forecastData)
         })
