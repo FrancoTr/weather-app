@@ -1,2 +1,2 @@
 # weather-app
-[Node.js] given a location, this app returns its coordinates and current weather (using weatherstack & mapbox APIs)
+[Node.js] given a location, this app returns its current weather (using weatherstack & mapbox APIs)
