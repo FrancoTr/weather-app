@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const port = process.env.PORT  || 3000 //Heroku enviroment port or localhost if testing locally
 
 // Define paths for Express config
 const publicDirectoryPatch = path.join(__dirname, '../public')
@@ -94,6 +95,9 @@ app.get('*', (req, res) => {    // "*" is a wildcard character, in this context,
     })
 })
 
-app.listen(3000, () => {    //Web server set up in a local enviroment
-    console.log('Server is up on port 3000.')
+
+app.listen(port, () => {    //Web server set up either in heroku enviroment or localhost:3000 
+    console.log('Server is up on port' + port)
 })    
+
+
