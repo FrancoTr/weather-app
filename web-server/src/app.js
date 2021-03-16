@@ -38,7 +38,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        helpMessage: 'This message will be redacted in the near future, I swear!',
+        helpMessage: 'This app works in a very simple way, you search for a location and you get the current weather in return',
         name: 'Franco Traverso'
     })
 })
