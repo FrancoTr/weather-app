@@ -24,14 +24,14 @@ app.use(express.static(publicDirectoryPatch))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather App',
-        name: 'Franco Traverso'
+        name: 'Franco'
     }) //views folder ought to be inside the project's root
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
-        name: 'Franco Traverso'
+        name: 'Franco'
     })
 })
 
@@ -39,7 +39,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
         helpMessage: 'This app works in a very simple way, you search for a location and you get the current weather in return',
-        name: 'Franco Traverso'
+        name: 'Franco'
     })
 })
 
@@ -81,7 +81,7 @@ app.get('/products', (req, res) => {    //Error "Cannot set headers after they a
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404',
-        name: 'Franco Traverso',
+        name: 'Franco',
         errorMessage: 'Sorry!, Help article not found'
     })
 })
@@ -90,7 +90,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {    // "*" is a wildcard character, in this context, it means "match anything that hasn't been matched so far
     res.render('404', {
         title: '404',
-        name: 'Franco Traverso',
+        name: 'Franco',
         errorMessage: 'Sorry!, 404 Page not found :('
     })
 })
